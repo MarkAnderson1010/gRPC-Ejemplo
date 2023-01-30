@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "Grpc_miPrueba";
+
+package Calculador;
+
+service Calculador {
+  rpc Sumar (SumaRequest) returns (SumaReply);
+}
+
+message SumaRequest {
+  int32 numero1 = 1;
+  int32 numero2 = 2;
+}
+
+message SumaReply {
+  int32 resultado = 1;
+}
